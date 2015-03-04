@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Equation2ndGrade</string>
+    <string name="app_name">EquationSolvingApp</string>
     <string name="action_settings">Settings</string>
     <string name="intro_text">Καλωσήλθατε στην εφαρμογή επίλυσης εξισώσεων!</string>
 	<string name="label_coeff_a">Δώστε τον συντελεστή a</string>

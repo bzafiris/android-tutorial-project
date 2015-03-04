@@ -4,7 +4,7 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
 	<classpathentry kind="lib" path="lib/robolectric-2.1-20130528.020731-27-jar-with-dependencies.jar" sourcepath="lib/robolectric-2.1-20130528.020731-27-sources.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/Equation2ndGrade"/>
 	<classpathentry kind="lib" path="/home/bzafiris/android-sdks/platforms/android-16/android.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/EquationSolvingApp"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

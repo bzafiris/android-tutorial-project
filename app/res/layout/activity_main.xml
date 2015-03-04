@@ -79,7 +79,7 @@
         android:layout_height="wrap_content"
             android:paddingTop="10dp"
         android:text="@string/label_diakrinousa"
-        android:contentDescription="Diakrinousa result" />
+        android:contentDescription="Discriminant result" />
       
       <TextView
         android:id="@+id/textStatus"
