@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Equation2ndGrade</string>
+    <string name="action_settings">Settings</string>
+    <string name="intro_text">Καλωσήλθατε στην εφαρμογή επίλυσης εξισώσεων!</string>
+	<string name="label_coeff_a">Δώστε τον συντελεστή a</string>
+	
+	<string name="label_coeff_b">Δώστε τον συντελεστή b</string>
+	
+	<string name="label_coeff_c">Δώστε τον συντελεστή c</string>
+	
+	<string name="label_calculate">Υπολογισμός</string>
+	
+	<string name="label_diakrinousa">Διακρίνουσα: </string>
+	
+	<string name="label_status">Τύπος Λύσεων: %1$s</string>
+	
+	<string name="label_root1">Λύση 1:</string>
+	
+	<string name="label_root2">Λύση 2:</string>
+	
+	<string name="status_two_roots">Δύο λύσεις</string>
+	<string name="status_double_root">Διπλή λύση</string>
+	<string name="status_no_root">Μη πραγματική λύση</string>
+	
+	
+	
+	
+</resources>

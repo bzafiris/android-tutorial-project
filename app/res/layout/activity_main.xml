@@ -1,0 +1,108 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignLeft="@+id/textView1"
+    android:layout_alignTop="@+id/textView1"
+    android:layout_marginLeft="10dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/intro_text"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        android:contentDescription="Activity header" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_coeff_a"
+        android:contentDescription="Coefficient a Label" />
+
+    <EditText
+        android:id="@+id/editCoeffA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:contentDescription="Coefficient a" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_coeff_b" />
+
+    <EditText
+        android:id="@+id/editCoeffB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberSigned" 
+        android:contentDescription="Coefficient b">
+        
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_coeff_c" />
+
+    <EditText
+        android:id="@+id/editCoeffC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberSigned" 
+        android:contentDescription="Coefficient c">
+    </EditText>
+
+    <Button
+        android:id="@+id/btn_calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickCalculate"
+        android:text="@string/label_calculate"
+        android:contentDescription="Calculate solution button" />
+    
+      <TextView
+        android:id="@+id/textDiakrinousa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+        android:text="@string/label_diakrinousa"
+        android:contentDescription="Diakrinousa result" />
+      
+      <TextView
+        android:id="@+id/textStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="@string/label_status" />
+      
+       <TextView
+        android:id="@+id/textRoot1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="@string/label_root1"
+        android:contentDescription="Solution 1" />
+      
+          <TextView
+        android:id="@+id/textRoot2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="@string/label_root2"
+        android:contentDescription="Solution 2" />
+
+
+</LinearLayout>
