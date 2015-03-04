@@ -1,7 +1,11 @@
 package com.example.equation2ndgrade;
 
 
-
+/**
+ * A simple class that solves quadratic equations
+ * @author Nikos Diamantidis
+ *
+ */
 public class QuadraticEquation {
 	public static final double Epsilon = 0.00001;
 	
