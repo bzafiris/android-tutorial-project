@@ -1,3 +1,0 @@
-#!/bin/bash
-
-$ANDROID_HOME/tools/android create uitest-project -n EquationSolvingAppUITest -t 2 -p .
