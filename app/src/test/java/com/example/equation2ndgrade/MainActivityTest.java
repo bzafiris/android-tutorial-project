@@ -21,7 +21,7 @@ import java.io.File;
 
 /**
  * Tests the MainActivity class with the Robolectric framework
- * 
+ * Do not forget the project.properties file in app/src/main
  * @author Vassilis Zafeiris
  *
  */
@@ -69,6 +69,7 @@ public class MainActivityTest {
 
 		TextView solution1View = (TextView) activity
 				.findViewById(com.example.equation2ndgrade.R.id.textRoot1);
+
 		Assert.assertEquals(mainActivityObject.formatRoot1Label(-1.0),
 				solution1View.getText().toString());
 
@@ -93,6 +94,8 @@ public class MainActivityTest {
 		Assert.assertEquals(solution2View.getText().toString(), mainActivityObject.formatRoot2Label(1.0));
 
 	}
+
+
 
 	@After
 	public void tearDown() throws Exception {

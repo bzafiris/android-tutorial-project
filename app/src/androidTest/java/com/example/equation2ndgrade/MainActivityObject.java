@@ -19,8 +19,13 @@ public class MainActivityObject {
 	}
 	
 	public String formatRoot1Label(double root){
-		
+
 		StringBuffer buffer = new StringBuffer(ctx.getResources().getString(R.string.label_root1));
+
+		if (Double.isNaN(root)){
+			return buffer.toString();
+		}
+
 		buffer.append(" ");
 		buffer.append(Double.toString(root));
 		return buffer.toString();
@@ -30,6 +35,11 @@ public class MainActivityObject {
 	public String formatRoot2Label(double root){
 		
 		StringBuffer buffer = new StringBuffer(ctx.getResources().getString(R.string.label_root2));
+
+		if (Double.isNaN(root)){
+			return buffer.toString();
+		}
+
 		buffer.append(" ");
 		buffer.append(Double.toString(root));
 		return buffer.toString();

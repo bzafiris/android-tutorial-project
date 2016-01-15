@@ -54,6 +54,31 @@ public class MainActivityFunctionalTest extends
 		mainActivityObject = new MainActivityObject(myActivity);
 	}
 
+    public void testNoSolutionEquation() throws Throwable {
+
+        // Perform actions that alter activity state in the Ui thread
+        runTestOnUiThread(new Runnable() {
+
+            @Override
+            public void run() {
+                editCoeffA.setText("3");
+                editCoeffB.setText("-1");
+                editCoeffC.setText("1");
+                btnCalculate.performClick();
+            }
+        });
+
+        TextView solution1View = (TextView) myActivity
+                .findViewById(R.id.textRoot1);
+
+        TextView solution2View = (TextView) myActivity
+                .findViewById(R.id.textRoot2);
+
+        assertEquals(mainActivityObject.formatRoot1Label(Double.NaN), solution1View.getText().toString());
+        assertEquals(mainActivityObject.formatRoot2Label(Double.NaN), solution2View.getText().toString());
+
+    }
+
 	public void testSingleRootEquation() throws Throwable {
 
 		// Perform actions that alter activity state in the Ui thread
@@ -65,7 +90,6 @@ public class MainActivityFunctionalTest extends
 				editCoeffB.setText("2");
 				editCoeffC.setText("1");
 				btnCalculate.performClick();
-
 			}
 		});
 
@@ -73,15 +97,10 @@ public class MainActivityFunctionalTest extends
 				.findViewById(R.id.textRoot1);
 		
 		assertEquals(mainActivityObject.formatRoot1Label(-1.0), solution1View.getText().toString());
-		
-		
+
 	}
 
 	public void testDoubleRootEquation() throws Throwable {
-
-		// Declare final, otherwise the variable is null
-		final EditText editCoeffA = (EditText) myActivity
-				.findViewById(R.id.editCoeffA);
 
 		// alternative ways to run code in the ui thread
 		myActivity.runOnUiThread(new Runnable() {
@@ -111,6 +130,8 @@ public class MainActivityFunctionalTest extends
 				.findViewById(R.id.textRoot2);
 		assertEquals(mainActivityObject.formatRoot2Label(1.0), solution2View.getText().toString());
 	}
+
+
 
 	@Override
 	protected void tearDown() throws Exception {

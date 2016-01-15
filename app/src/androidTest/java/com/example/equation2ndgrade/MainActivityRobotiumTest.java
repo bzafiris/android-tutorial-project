@@ -35,6 +35,28 @@ public class MainActivityRobotiumTest extends
 		mainActivityObject = new MainActivityObject(getActivity());
 	}
 
+	public void testNoSolutionEquation() throws Throwable {
+
+		solo.clearEditText(0);
+		solo.enterText(0, "3");
+
+		solo.clearEditText(1);
+		solo.enterText(1, "-1");
+
+		solo.clearEditText(2);
+		solo.enterText(2, "1");
+
+		TextView solution1View = (TextView) getActivity()
+				.findViewById(R.id.textRoot1);
+
+		TextView solution2View = (TextView) getActivity()
+				.findViewById(R.id.textRoot2);
+
+		assertEquals(mainActivityObject.formatRoot1Label(Double.NaN), solution1View.getText().toString());
+		assertEquals(mainActivityObject.formatRoot2Label(Double.NaN), solution2View.getText().toString());
+
+	}
+
 	public void testSingleRootEquation() {
 
 		solo.clearEditText(0);

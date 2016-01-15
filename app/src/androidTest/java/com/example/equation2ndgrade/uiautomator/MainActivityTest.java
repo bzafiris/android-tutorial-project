@@ -8,8 +8,10 @@ import android.support.test.uiautomator.UiObject;
 import android.support.test.uiautomator.UiObjectNotFoundException;
 import android.support.test.uiautomator.UiScrollable;
 import android.support.test.uiautomator.UiSelector;
+import android.widget.TextView;
 
 
+import com.example.equation2ndgrade.R;
 import com.example.equation2ndgrade.uiautomator.MainActivityObject;
 
 import junit.framework.Assert;
@@ -87,6 +89,25 @@ public class MainActivityTest  {
 	}
 
     @Test
+    public void testNoSolutionEquation() throws Throwable {
+
+        MainActivityObject mainActivity = new MainActivityObject(mDevice);
+        mainActivity.setCoefficientA("3");
+        mainActivity.setCoefficientB("-1");
+        mainActivity.setCoefficientC("1");
+
+        mainActivity.clickCalculateButton();
+
+
+        String solutionLabel = mainActivity.getSolution1Text();
+        Assert.assertEquals("Root 1:", solutionLabel);
+
+        String solution2Label = mainActivity.getSolution2Text();
+        Assert.assertEquals("Root 2:", solution2Label);
+
+    }
+
+    @Test
 	public void testDoubleRootEquation() throws Throwable {
 
 		MainActivityObject mainActivity = new MainActivityObject(mDevice);
@@ -106,5 +127,27 @@ public class MainActivityTest  {
 		Assert.assertEquals("Root 2: 1.0", solution2Label);
 
 	}
+
+    @Test
+    public void testSingleRootEquation() throws Throwable {
+
+        MainActivityObject mainActivity = new MainActivityObject(mDevice);
+        mainActivity.setCoefficientA("1");
+        mainActivity.setCoefficientB("2");
+        mainActivity.setCoefficientC("1");
+
+        mainActivity.clickCalculateButton();
+
+        String discriminatorLabel = mainActivity.getDiscriminantText();
+        Assert.assertEquals("Discriminant: 0.0", discriminatorLabel);
+
+        String solutionLabel = mainActivity.getSolution1Text();
+        Assert.assertEquals("Root 1: -1.0", solutionLabel);
+
+        String solution2Label = mainActivity.getSolution2Text();
+        Assert.assertEquals("Root 2:", solution2Label);
+
+    }
+
 
 }
