@@ -51,7 +51,15 @@ public class MainActivityTest  {
 		mDevice.pressHome();
 
 		// Bring up the All Apps screen (requires English locale)
-		UiObject allAppsButton = mDevice.findObject(new UiSelector().text("Apps"));
+		UiObject allAppsButton = null;
+
+		allAppsButton = mDevice.findObject(new UiSelector().text("Apps"));
+
+        // In some devices "Apps" is part of contentDescription
+		if (!allAppsButton.exists()){
+			allAppsButton = mDevice.findObject(new UiSelector().descriptionContains("Apps"));
+		}
+
 		// Simulate a click to bring up the All Apps screen.
 		allAppsButton.clickAndWaitForNewWindow();
 
