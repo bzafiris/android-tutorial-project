@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         editCoeffB = (EditText) findViewById(R.id.editCoeffB);
         editCoeffC = (EditText) findViewById(R.id.editCoeffC);
 
-        txtDiscriminant = (TextView) findViewById(R.id.textDiakrinousa);
+        txtDiscriminant = (TextView) findViewById(R.id.textDiscriminant);
         txtStatus = (TextView) findViewById(R.id.textStatus);
         txtSolution1 = (TextView) findViewById(R.id.textRoot1);
         txtSolution2 = (TextView) findViewById(R.id.textRoot2);
