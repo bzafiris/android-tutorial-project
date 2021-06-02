@@ -1,18 +1,13 @@
 package com.example.equation2ndgrade.uiautomator;
 
 //Import the uiautomator libraries
-import android.support.test.InstrumentationRegistry;
-import android.support.test.runner.AndroidJUnit4;
-import android.support.test.uiautomator.UiDevice;
-import android.support.test.uiautomator.UiObject;
-import android.support.test.uiautomator.UiObjectNotFoundException;
-import android.support.test.uiautomator.UiScrollable;
-import android.support.test.uiautomator.UiSelector;
-import android.widget.TextView;
 
-
-import com.example.equation2ndgrade.R;
-import com.example.equation2ndgrade.uiautomator.MainActivityObject;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+import androidx.test.platform.app.InstrumentationRegistry;
+import androidx.test.uiautomator.UiDevice;
+import androidx.test.uiautomator.UiObject;
+import androidx.test.uiautomator.UiObjectNotFoundException;
+import androidx.test.uiautomator.UiSelector;
 
 import junit.framework.Assert;
 
@@ -27,7 +22,7 @@ import org.junit.runner.RunWith;
  *
  */
 @RunWith(AndroidJUnit4.class)
-public class MainActivityTest  {
+public class EquationActivityTest {
 
 	public static String APP_NAME = "EquationSolvingApp";
 	public static String APP_PACKAGE = "com.example.equation2ndgrade";
@@ -91,7 +86,7 @@ public class MainActivityTest  {
     @Test
     public void testNoSolutionEquation() throws Throwable {
 
-        MainActivityObject mainActivity = new MainActivityObject(mDevice);
+        EquationActivityObject mainActivity = new EquationActivityObject(mDevice);
         mainActivity.setCoefficientA("3");
         mainActivity.setCoefficientB("-1");
         mainActivity.setCoefficientC("1");
@@ -110,7 +105,7 @@ public class MainActivityTest  {
     @Test
 	public void testDoubleRootEquation() throws Throwable {
 
-		MainActivityObject mainActivity = new MainActivityObject(mDevice);
+		EquationActivityObject mainActivity = new EquationActivityObject(mDevice);
 		mainActivity.setCoefficientA("1");
 		mainActivity.setCoefficientB("-3");
 		mainActivity.setCoefficientC("2");
@@ -131,7 +126,7 @@ public class MainActivityTest  {
     @Test
     public void testSingleRootEquation() throws Throwable {
 
-        MainActivityObject mainActivity = new MainActivityObject(mDevice);
+        EquationActivityObject mainActivity = new EquationActivityObject(mDevice);
         mainActivity.setCoefficientA("1");
         mainActivity.setCoefficientB("2");
         mainActivity.setCoefficientC("1");

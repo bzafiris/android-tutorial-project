@@ -2,15 +2,16 @@ package com.example.equation2ndgrade.uiautomator;
 
 
 
+import androidx.test.uiautomator.UiDevice;
+import androidx.test.uiautomator.UiObject;
+import androidx.test.uiautomator.UiObjectNotFoundException;
+import androidx.test.uiautomator.UiSelector;
+
 import junit.framework.Assert;
 
-import android.support.test.uiautomator.UiDevice;
-import android.support.test.uiautomator.UiObject;
-import android.support.test.uiautomator.UiObjectNotFoundException;
-import android.support.test.uiautomator.UiSelector;
 
 
-public class MainActivityObject {
+public class EquationActivityObject {
 
 	UiDevice mDevice;
 	/**
@@ -26,7 +27,7 @@ public class MainActivityObject {
 	
 	
 
-	public MainActivityObject(UiDevice mDevice) {
+	public EquationActivityObject(UiDevice mDevice) {
 		this.mDevice = mDevice;
 	}
 	

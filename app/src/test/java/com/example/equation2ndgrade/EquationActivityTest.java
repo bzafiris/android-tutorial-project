@@ -13,12 +13,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.example.equation2ndgrade.BuildConfig;
-import com.example.equation2ndgrade.MainActivity;
-import com.example.equation2ndgrade.MainActivityObject;
-
-import java.io.File;
-
 /**
  * Tests the MainActivity class with the Robolectric framework
  * Do not forget the project.properties file in app/src/main
@@ -26,26 +20,25 @@ import java.io.File;
  *
  */
 @RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class,
-	sdk = 21, packageName = "com.example.equation2ndgrade",
-        manifest = "src/main/AndroidManifest.xml"
+@Config(
+	sdk = 27, packageName = "com.example.equation2ndgrade"
 )
-public class MainActivityTest {
+public class EquationActivityTest {
 
-	private MainActivity activity;
-	MainActivityObject mainActivityObject;
+	private EquationActivity activity;
+	EquationActivityObject mainActivityObject;
 	EditText editCoeffA;
 	EditText editCoeffB;
 	EditText editCoeffC;
 	Button btnCalculate;
 
-	public MainActivityTest() {
+	public EquationActivityTest() {
 	}
 
 	@Before
 	public void setUp() throws Exception {
 
-		activity = Robolectric.buildActivity(MainActivity.class).create().get();
+		activity = Robolectric.buildActivity(EquationActivity.class).create().get();
 		editCoeffA = (EditText) activity
 				.findViewById(com.example.equation2ndgrade.R.id.editCoeffA);
 
@@ -56,7 +49,7 @@ public class MainActivityTest {
 		btnCalculate = (Button) activity
 				.findViewById(com.example.equation2ndgrade.R.id.btn_calculate);
 
-		mainActivityObject = new MainActivityObject(activity);
+		mainActivityObject = new EquationActivityObject(activity);
 	}
 
 	@Test

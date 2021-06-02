@@ -10,11 +10,11 @@ import com.example.equation2ndgrade.R;
  * @author Vassilis Zafeiris
  *
  */
-public class MainActivityObject {
+public class EquationActivityObject {
 
 	Context ctx;
 	
-	public MainActivityObject(Context ctx) {
+	public EquationActivityObject(Context ctx) {
 		this.ctx = ctx;
 	}
 	
