@@ -4,6 +4,17 @@ The project includes a small android application (quadratic equation solver) tha
 with the help of various test frameworks and specifically (a) Android test framework,
 (b) Espresso, (c) UIAutomator and (d) Robolectric.
 
+Before running instrumented tests follow the instructions of the android developer team:
+```
+To avoid flakiness, we highly recommend that you turn off system animations
+on the virtual or physical devices used for testing. On your device, under
+Settings > Developer options, disable the following 3 settings:
+
+- Window animation scale
+- Transition animation scale
+- Animator duration scale
+```
+
 Execute the android integration tests in a connected device or emulator with the command:
 ```
 gradlew connectedCheck

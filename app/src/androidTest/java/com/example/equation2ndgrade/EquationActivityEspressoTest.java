@@ -1,8 +1,9 @@
 package com.example.equation2ndgrade;
 
 
+import androidx.test.espresso.Espresso;
+import androidx.test.ext.junit.rules.ActivityScenarioRule;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
-import androidx.test.rule.ActivityTestRule;
 
 import org.junit.Rule;
 import org.junit.Test;
@@ -31,7 +32,7 @@ public class EquationActivityEspressoTest {
      * after each test.
      */
     @Rule
-    public ActivityTestRule<EquationActivity> mActivityRule = new ActivityTestRule<>(
+    public ActivityScenarioRule<EquationActivity> mActivityRule = new ActivityScenarioRule<>(
             EquationActivity.class);
 
 
@@ -47,6 +48,7 @@ public class EquationActivityEspressoTest {
         onView(withHint("Coefficient c")).perform(clearText());
         onView(withHint("Coefficient c")).perform(typeText("1"));
 
+        Espresso.closeSoftKeyboard();
         onView(withId(R.id.btn_calculate)).perform(click());
 
         onView(withId(R.id.textRoot1)).check(matches(withText("Root 1:")));
@@ -66,6 +68,7 @@ public class EquationActivityEspressoTest {
         onView(withHint("Coefficient c")).perform(clearText());
         onView(withHint("Coefficient c")).perform(typeText("2"));
 
+        Espresso.closeSoftKeyboard();
         onView(withId(R.id.btn_calculate)).perform(click());
 
         onView(withId(R.id.textDiscriminant)).check(matches(withText("Discriminant: 1.0")));
@@ -86,6 +89,7 @@ public class EquationActivityEspressoTest {
         onView(withHint("Coefficient c")).perform(clearText());
         onView(withHint("Coefficient c")).perform(typeText("1"));
 
+        Espresso.closeSoftKeyboard();
         onView(withId(R.id.btn_calculate)).perform(click());
 
         onView(withId(R.id.textDiscriminant)).check(matches(withText("Discriminant: 0.0")));
