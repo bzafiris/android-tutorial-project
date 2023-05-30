@@ -63,7 +63,15 @@ public class EquationActivityObject {
 		coefficientCEditText.clearTextField();
 		coefficientCEditText.setText(value);
 	}
-	
+
+	public void closeSoftKeyboard(){
+		mDevice.pressBack();
+	}
+
+	public void swipeUp(){
+		mDevice.swipe(100, 100, 100, 50, 2);
+	}
+
 	public String getDiscriminantText() throws UiObjectNotFoundException {
 		
 		UiObject diakrinousaTextView = findByContentDescription(DISCRIMINANT_CONTENT_DESC);

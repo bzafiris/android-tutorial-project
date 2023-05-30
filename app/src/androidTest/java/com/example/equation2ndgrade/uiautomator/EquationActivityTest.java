@@ -91,8 +91,10 @@ public class EquationActivityTest {
         mainActivity.setCoefficientB("-1");
         mainActivity.setCoefficientC("1");
 
+        mainActivity.closeSoftKeyboard();
         mainActivity.clickCalculateButton();
 
+		mainActivity.swipeUp();
 
         String solutionLabel = mainActivity.getSolution1Text();
         Assert.assertEquals("Root 1:", solutionLabel);
@@ -110,7 +112,11 @@ public class EquationActivityTest {
 		mainActivity.setCoefficientB("-3");
 		mainActivity.setCoefficientC("2");
 
+		mainActivity.closeSoftKeyboard();
+
 		mainActivity.clickCalculateButton();
+
+		mainActivity.swipeUp();
 
 		String discriminatorLabel = mainActivity.getDiscriminantText();
 		Assert.assertEquals("Discriminant: 1.0", discriminatorLabel);
@@ -131,7 +137,11 @@ public class EquationActivityTest {
         mainActivity.setCoefficientB("2");
         mainActivity.setCoefficientC("1");
 
+		mainActivity.closeSoftKeyboard();
+
         mainActivity.clickCalculateButton();
+
+        mainActivity.swipeUp();
 
         String discriminatorLabel = mainActivity.getDiscriminantText();
         Assert.assertEquals("Discriminant: 0.0", discriminatorLabel);
